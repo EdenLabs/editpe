@@ -29,7 +29,7 @@ doctest = false
 
 [features]
 
-default = ["std", "images"]
+default = []
 
 # Enables standard library features, including reading and writing files.
 std = ["dep:thiserror"]
