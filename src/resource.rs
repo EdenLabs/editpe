@@ -263,7 +263,7 @@ impl ResourceDirectory {
                         let mut entry = read::<IconDirectoryEntry>(&icon[6..20])?;
                         entry.id = id as u16;
                         icon_directory_entries.push(entry);
-                        icon.to_owned().into()
+                        (&icon[20..]).to_owned().into()
                     },
                     codepage: CODE_PAGE_ID_EN_US as u32,
                     reserved: 0,
